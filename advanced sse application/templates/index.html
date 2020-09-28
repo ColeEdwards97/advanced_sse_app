@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+
+	<p id="data"></p>
+	<p id="time"></p>
+
+
+	{% for data in stream %}
+		<script>
+			a = document.getElementById("data");
+			c = document.getElementById("time");
+			
+			a.innerHTML = "a: {{data[0]}} b: {{data[1]}}";
+			c.innerHTML = "c: {{data[2]}}"
+		</script>
+	{% endfor %}
+
+</body>
+
+</html>
